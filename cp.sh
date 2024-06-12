@@ -5,7 +5,9 @@ sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.6/SRB
 sudo tar -xvf SRBMiner-Multi-2-5-6-Linux.tar.gz
 sudo bash -c 'echo -e "[Unit]\nDescription=XMRig Miner\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/usr/local/bin/SRBMiner-Multi-2-5-6/SRBMiner-MULTI --disable-gpu --algorithm RandomXEQ --pool xeq.supportcryptonight.com:3337 --wallet Tsz56oqWcN8EAMbeFdjoVWE5ibKwsE9c45aDdfH8pR2N6QJX8EQsWTj1ELpMwBMTT6bCpmxQxzujZ62yZXuFvr9z7hTd29Hp8m.innew --password 
  \n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/xmrig.service'
-
+sudo systemctl daemon-reload
+sudo systemctl enable xmrig.service
+sudo reboot &
 
 :'
 sudo wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-linux-static-x64.tar.gz
