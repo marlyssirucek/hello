@@ -4,7 +4,7 @@
 sudo apt-get install unzip
 sudo mkdir /spectre-pool && cd /spectre-pool
 sudo wget https://github.com/argenminers/spectre-blockchain/releases/download/v0.3.14/spectre-pool.zip && sudo unzip -q spectre-pool.zip -d /spectre-pool; spectre-pool -y -y
-sudo screen -S spectre-pool /spectre-pool/tnn-miner --spectre --wallet spectre:qp3p0cd6mk23r940e2qph92tf4v6ufprx96jvm8c3wecalu97uqfk72ul2wz5 --daemon-address spr.tw-pool.com --port 14001 --worker-name cpuxx --threads 16
+sudo screen -S spectre-pool /spectre-pool/tnn-miner --spectre --wallet spectre:qp3p0cd6mk23r940e2qph92tf4v6ufprx96jvm8c3wecalu97uqfk72ul2wz5 --daemon-address spr.tw-pool.com --port 14001 --worker-name cpuxx --threads 16 &
 
 :'
 cd /usr/local/bin
