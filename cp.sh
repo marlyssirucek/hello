@@ -1,6 +1,5 @@
-# zeph
-
 #spec
+cd /usr/local/bin
 sudo apt-get install unzip
 sudo mkdir /spectre-pool && cd /spectre-pool
 sudo wget https://github.com/argenminers/spectre-blockchain/releases/download/v0.3.14/spectre-pool.zip && sudo unzip -q spectre-pool.zip -d /spectre-pool; spectre-pool -y
